@@ -39,7 +39,7 @@
         ],
 
     ];
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +51,10 @@
         <title>Trova Hotel</title>
     </head>
     <body>
-        
+        <?php foreach ($hotels as $hotel) {?>
+            <h1>
+                <?= $hotel["name"] ?>
+            </h1>
+            <?php }?>
     </body>
 </html>
