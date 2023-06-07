@@ -56,29 +56,31 @@
             <header class="d-flex justify-content-center m-4">
                 <h1>Trova l'hotel giusto per te!</h1>
             </header>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="col">Nome</th>
-                        <th class="col">Descrizione</th>
-                        <th class="col">Parcheggio</th>
-                        <th class="col">Voto</th>
-                        <th class="col">Distanza dal centro</th>
-                    </tr>
-                </thead>
-                <tbody><?php
-                    foreach ($hotels as $hotel) {
-                        $with_park=$hotel['parking']? 'Si':'No';?>
+            <main>
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td><?= $hotel["name"] ?></td>
-                            <td><?= $hotel["description"] ?></td>
-                            <td><?= $with_park ?></td>
-                            <td><?= $hotel["vote"] ?></td>
-                            <td><?= $hotel["distance_to_center"] ?> km</td> 
-                        </tr><?php 
-                    }?> 
-                </tbody>
-            </table>
+                            <th class="col">Nome</th>
+                            <th class="col">Descrizione</th>
+                            <th class="col">Parcheggio</th>
+                            <th class="col">Voto</th>
+                            <th class="col">Distanza dal centro</th>
+                        </tr>
+                    </thead>
+                    <tbody><?php
+                        foreach ($hotels as $hotel) {
+                            $with_park=$hotel['parking']? 'Si':'No';?>
+                            <tr>
+                                <td><?= $hotel["name"] ?></td>
+                                <td><?= $hotel["description"] ?></td>
+                                <td><?= $with_park ?></td>
+                                <td><?= $hotel["vote"] ?></td>
+                                <td><?= $hotel["distance_to_center"] ?> km</td> 
+                            </tr><?php 
+                        }?> 
+                    </tbody>
+                </table>
+            </main>
         </div>
     </body>
 </html>
