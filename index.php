@@ -71,7 +71,7 @@
                             <td><?= $hotel["description"] ?></td>
                             <td><?= $with_park ?></td>
                             <td><?= $hotel["vote"] ?></td>
-                            <td><?= $hotel["distance_to_center"] ?></td> 
+                            <td><?= $hotel["distance_to_center"] ?> km</td> 
                         </tr><?php 
                     }?> 
                 </tbody>
