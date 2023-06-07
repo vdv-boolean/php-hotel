@@ -51,10 +51,23 @@
         <title>Trova Hotel</title>
     </head>
     <body>
-        <?php foreach ($hotels as $hotel) {?>
-            <h1>
-                <?= $hotel["name"] ?>
-            </h1>
-            <?php }?>
+        
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Voto</th>
+                    <th>Distanza dal centro</th>
+                </tr><?php 
+
+                foreach ($hotels as $hotel) {?>
+                <tr>
+                    <th><?= $hotel["name"] ?></th>
+                    <th><?= $hotel["description"] ?></th>
+                    <th><?= $hotel["vote"] ?></th>
+                    <th><?= $hotel["distance_to_center"] ?></th> 
+                </tr><?php 
+                }?> 
+            </table>
     </body>
 </html>
